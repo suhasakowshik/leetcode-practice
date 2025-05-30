@@ -1,6 +1,8 @@
 #include<iostream>
 #include<string>
 
+// O(n) run and O(1) space
+
 bool checkIfPalindrom(std::string s)
 {
     int left=0;
