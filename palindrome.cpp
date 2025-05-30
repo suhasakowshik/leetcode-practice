@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 
+// Two-Pointers leetcode data structures lesson
 // O(n) run and O(1) space
 
 bool checkIfPalindrom(std::string s)
