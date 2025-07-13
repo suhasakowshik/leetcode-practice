@@ -3,6 +3,8 @@
         "*.cu": "cuda-cpp",
         "*.tpp": "cuda-cpp",
         "iostream": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iterator": "cpp",
+        "ostream": "cpp"
     }
 }
