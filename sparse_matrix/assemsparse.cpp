@@ -358,7 +358,6 @@ public:
             fill(Ap.begin(),Ap.end(),0.0);
             for(int i=0;i<totalDOF;i++)
             {   
-                Ap[i]=0.0;
                 for(int j=rowPtr[i];j<rowPtr[i+1];j++)
                 {
                     Ap[i]+=values[j]*p[colIndices[j]];
@@ -483,10 +482,10 @@ int main()
     // RHS vector b
     vector<double> b = {15.0, 117.0, 10.0, 12.0, 33.0};
 
-    vector<double> x_jacobi = smat.solverJacobi(b, values, colIndices, rowPtr, 1e-10, 1000);
-    vector<double> x_gs = smat.solverGaussSidel(b, values, colIndices, rowPtr, 1e-10, 1000);
-    vector<double> x_cg = smat.solverCG(b, values, colIndices, rowPtr, 1e-10, 1000);
-    vector<double> x_pcg = smat.solverPCG_Jacobi(b, values, colIndices, rowPtr, 1e-10, 1000);
+    vector<double> x_jacobi = smat.solverJacobi(b, values, colIndices, rowPtr, 1e-6, 1000);
+    vector<double> x_gs = smat.solverGaussSidel(b, values, colIndices, rowPtr, 1e-6, 1000);
+    vector<double> x_cg = smat.solverCG(b, values, colIndices, rowPtr, 1e-6, 1000);
+    vector<double> x_pcg = smat.solverPCG_Jacobi(b, values, colIndices, rowPtr, 1e-6, 1000);
 
     cout << "=== Jacobi Solution ===\n";
     for (double xi : x_jacobi) cout << xi << "\n";
