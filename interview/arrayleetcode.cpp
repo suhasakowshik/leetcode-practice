@@ -107,15 +107,23 @@ int main()
     //     cout<<"No duplicate"<<endl;
     // }
 
-    vector<int> nums{3,2,4};
-    int target=6;
+    // vector<int> nums{3,2,4};
+    // int target=6;
 
-    auto s= twoSum(nums,target);
-    for(int c:s)
-    {
-        cout<<c<<" ";
-    }
-    cout<<endl;
+    // auto s= twoSum(nums,target);
+    // for(int c:s)
+    // {
+    //     cout<<c<<" ";
+    // }
+    // cout<<endl;
+
+    int x=5;
+    int y=++x;
+    cout<<"x: "<<x<<" , y : "<<y<<"\n";
+
+    int a=5;
+    int b=a++;
+    cout<<"a: "<<a<<" , b : "<<b<<"\n";
 
     return 0;
 }
